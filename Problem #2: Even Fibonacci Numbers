@@ -1,0 +1,16 @@
+#!/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    lst = [0,2]
+    i = 2
+    sums = 2
+    while((4*lst[-1]+lst[-2]) < n):
+        lst.append(4*lst[-1]+lst[-2])
+        sums += lst[-1]
+    print(sums)
+    
