@@ -1,0 +1,33 @@
+#!/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    sums = 0
+    num1 = 0
+    num2 = 0
+    num3 = 0
+    num4 = 0
+    num1 = 3
+    temp = (n-1)%3
+    num2 = n - temp -1
+    num3 = 5
+    temp = (n-1)%5
+    num4 = n - temp -1
+    num5 = 15
+    temp = (n-1)%15
+    num6 = n - temp-1
+    if (n < 4):
+        num1 = 0
+    if (n < 6):
+        num3 = 0
+    if (n < 16):
+        num5 = 0  
+    number = (n-1)//3
+    number2 = (n-1)//5
+    number3 = ((n-1)//15)
+    sums = sums + (num1+num2)*(number)+(num3+num4)*number2-((num5+num6)*number3)
+    print(sums>>1)
