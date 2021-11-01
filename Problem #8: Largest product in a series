@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n,k = input().strip().split(' ')
+    n,k = [int(n),int(k)]
+    num = input().strip()
+    lst = list(num)
+    pro = 0
+    for i in range(k, n+1):
+        nums = 1
+        for j in range(0, k):
+            nums = nums*int(lst[i-j-1])
+        if (nums > pro):
+            pro = nums
+    print(pro)
+        
+    
