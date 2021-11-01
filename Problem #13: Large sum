@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import sys
+
+t = int(input().strip())
+sums = 0
+for a0 in range(t):
+    n = int(input().strip())
+    strs = str(n)
+    one = strs[0:15]
+    sums+= int(one)
+sums = str(sums)
+sums = sums[0:10]
+print(sums)
